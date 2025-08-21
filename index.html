@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TitanMC | Home</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(-45deg, #0f0f0f, #1a1a1a, #0f0f0f, #1a1a1a);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: white;
+      text-align: center;
+    }
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: rgba(0,0,0,0.6);
+      padding: 10px;
+      position: sticky;
+      top: 0;
+    }
+    nav a {
+      color: #00ffff;
+      margin: 0 15px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: white;
+      text-shadow: 0 0 10px #00ffff;
+    }
+    h1 {margin-top: 50px; font-size: 3em;}
+    .btn {
+      background: #00bcd4;
+      color: white;
+      padding: 12px 25px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.3s, background 0.3s;
+    }
+    .btn:hover {
+      transform: scale(1.1);
+      background: #008ba3;
+    }
+    footer {margin-top: 50px; font-size: 0.9em; color: gray;}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="gamemodes.html">Gamemodes</a>
+    <a href="kits.html">Kits</a>
+    <a href="team.html">Team</a>
+    <a href="news.html">News</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <h1>Welcome to TitanMC</h1>
+  <p>Play Java or Bedrock Edition with one IP</p>
+  <button class="btn" onclick="showJoin()">Join Now</button>
+
+  <div id="joinModal" style="display:none; margin-top:20px;">
+    <p><strong>Select Version:</strong></p>
+    <button class="btn" onclick="alert('Java IP: play.titanmc.online')">Java</button>
+    <button class="btn" onclick="alert('Bedrock IP: play.titanmc.online | Port: 19132')">Bedrock</button>
+  </div>
+
+  <footer>© 2025 TitanMC Network</footer>
+
+  <script>
+    function showJoin() {
+      document.getElementById('joinModal').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
